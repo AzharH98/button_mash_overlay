@@ -1,0 +1,113 @@
+<html>
+
+<head>
+
+	<script src="../js/comms.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/greensock-js/src/minified/TweenMax.min.js" type="text/javascript" charset="utf-8"></script>
+
+<style text="text/CSS">
+
+	@font-face {
+		font-family: "Bebas";
+		src: url("../fonts/BebasNeue-Regular.otf");
+	}
+
+	
+    body {
+      width: 1980px;
+      height: 1080px;
+      background-color: transparent;
+      overflow: hidden;
+      font-family: "Bebas";
+      color: white;
+      text-transform: uppercase;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 2px 2px 3px black;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .nameboard {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+
+    .wrappers{
+      position: absolute;
+      width: 586px;
+      height: 80px;
+      line-height: 89px;
+      text-align: center;
+      top:858px;
+      font-size: 100px;
+      opacity: 0;
+    }
+	
+    .handles {
+      position: absolute;
+      width: 516px;
+      height: 60px;
+      line-height: 66px;
+      text-align: center;
+      top: 952px;
+      font-size: 55px;
+      color: gold;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 2px 2px 3px black;
+      opacity: 0;
+    }
+
+    #comm1Wrapper{
+      left: 217px;
+    }
+
+    #comm2Wrapper {
+      left:1135px;
+    }
+
+    #comm1Handle{
+      left: 279px;
+    }
+
+    #comm2Handle {
+      left:1140px;
+    }
+
+</style>
+
+</head>
+
+<body>
+	<div id="nameboard">
+		<img src="../imgs/comms.png" id="nb_img"></img>
+		<div id="leftWrapper">
+		  <span id="comm1Wrapper" class="wrappers">
+			<span id="comm1Name" class="names"></span>
+		  </span>
+		  <span id="comm1Handle" class="handles"></span>
+		</div>
+		<div id="rightWrapper">
+		  <span id="comm2Wrapper" class="wrappers">
+			<span id="comm2Name" class="names"></span>
+		  </span>
+		  <span id="comm2Handle" class="handles"></span>
+		</div>
+	  </div>
+
+<script type="text/javascript">
+
+let comm1Move = '+90px',
+    comm2Move = '-90px',
+    comm1HandleMove='+100px',
+    comm2HandleMove='-100px',
+    nameDelay = .2,
+    nameTime = .3,
+    nameSize= '100px',
+    handleSize='55px';
+
+</script>
+
+
+</body>
+
+</html>

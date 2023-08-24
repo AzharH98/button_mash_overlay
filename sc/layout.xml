@@ -1,0 +1,47 @@
+<!DOCTYPE StreamControlLayout>
+<layout width="550" height="270" tabbed="1">
+ <tab name="Match Info">
+  <label x="10" y="15" width="49" height="13">Player 1</label>
+  <label x="10" y="45" width="49" height="13">Player 2</label>
+  <label x="10" y="78" width="46" height="13">Round</label>
+  <label x="10" y="115" width="46" height="13">Game</label>
+  <lineEdit id="p1Name" x="70" y="10" width="171" height="20" dataSet="players.csv" dataField="1"/>
+  <lineEdit id="p1Team" x="251" y="10" width="50" height="20" dataSet="players.csv" dataField="2" master="p1Name"/>
+  <spinBox id="p1Score" x="310" y="9" width="42" height="25" maximum="999" />
+  <lineEdit id="p2Name" x="70" y="40" width="171" height="20" dataSet="players.csv" dataField="1"/>
+  <lineEdit id="p2Team" x="251" y="40" width="50" height="20" dataSet="players.csv" dataField="2" master="p2Name"/>
+  <spinBox id="p2Score" x="310" y="39" width="42" height="25" maximum="999" />
+
+  <lineEdit id="round" x="70" y="74" width="151" height="20" dataSet="round.csv" dataField="1"/>
+
+  <button type="swap" x="290" y="90" width="51" height="33" tooltip="Swap the Scores" id="swap1" swapSet1="p1Name,p1Team,p1Score" swapSet2="p2Name,p2Team,p2Score">Swap</button>
+  <button type="reset" x="350" y="90" width="51" height="33" tooltip="Reset the Scores" id="reset1" reset="p1Score,p2Score">Reset</button>
+  <button type="reset" x="410" y="90" width="71" height="33" tooltip="Clear Match info" id="clearAll" reset="p1Name,p1Team,p1Score,p2Name,p2Team,p2Score">Clear All</button>
+
+  <comboBox id="game" editable="1" x="70" y="110" width="171" height="20" default="TEKKEN7">
+  <comboItem>TEKKEN7</comboItem>
+  <comboItem>BBTAG</comboItem>
+  <comboItem>SFVAE</comboItem>
+  <comboItem>UNIST</comboItem>
+  <comboItem>BBCF</comboItem>
+  <comboItem>DBFZ</comboItem>
+  <comboItem>GGXRD</comboItem>
+  <comboItem>KOFXIV</comboItem>
+  <comboItem>USF4</comboItem>
+  <comboItem>TEKKENTAG2</comboItem>
+
+  </comboBox>
+
+ </tab>
+ <tab name="Commentary">
+  <label x="10" y="14" width="100" height="13">Commentator 1</label>
+  <label x="10" y="44" width="100" height="13">Commentator 2</label>
+  <lineEdit id="comm1Name" x="120" y="10" width="180" height="20" dataSet="comms.csv" dataField="1"/>
+  <lineEdit id="comm1Handle" x="310" y="10" width="150" height="20" dataSet="comms.csv" dataField="2" master="comm1Name"/>/>
+  <lineEdit id="comm2Name" x="120" y="40" width="180" height="20" dataSet="comms.csv" dataField="1"/>
+  <lineEdit id="comm2Handle" x="310" y="40" width="150" height="20" dataSet="comms.csv" dataField="2" master="comm2Name"/>/>
+
+  <button type="swap" x="50" y="90" width="51" height="33" tooltip="Swap the Comms" id="swap2" swapSet1="comm1Name,comm1Handle" swapSet2="comm2Name,comm2Handle">Swap</button>
+  <button type="reset" x="120" y="90" width="71" height="33" tooltip="Clear Comm info" id="reset2" reset="comm1Name,comm1Handle,comm2Name,comm2Handle">Clear All</button>
+ </tab>
+</layout>
