@@ -1,0 +1,14 @@
+chardet
+charset-normalizer
+pyqt5
+requests
+py7zr
+deepdiff
+qdarkstyle
+Pillow
+Flask
+flask-cors
+asyncio
+python-dateutil
+pynput
+cloudscraper
